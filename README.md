@@ -6,7 +6,7 @@ When I started driving, I wanted Bluetooth in my 2004 Jeep Grand Cherokee. Sever
 ## Useful Info
 
  - My radio model is p05064354aj.
- - I'm using an Arduino UNO
+ - I'm using an Arduino UNO and a XS-3868 Bluetooth module
  - Chrysler radios, made before 2004, use the car’s internal PCI bus for communication with other accessories (i.e. a cd changer). It’s a good idea to be careful when writing to this bus because you could damage your car.
  - My car uses the J1850 VPW protocol.
  - Some good vocabulary to know for this protocol:
