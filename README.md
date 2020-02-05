@@ -1,10 +1,11 @@
 # Jeep Bluetooth Mod
 
 ## About
-When I started driving, I wanted Bluetooth in my 2004 Jeep Grand Cherokee. Several years later, I finally got around to building a Bluetooth mod. My radio has a plug for a cd changer, so I used an Arduino and a Bluetooth module to make a pseudo cd changer. It took me about a month, however I procrastinated a lot. [Here's a video of it working](https://youtu.be/_DS7fCqb5ws).
+When I started driving, I wanted Bluetooth in my 2004 Jeep Grand Cherokee. Several years later, I finally got around to building a Bluetooth mod. My radio has a plug for a cd changer, so I used an Arduino and a Bluetooth module to make a pseudo cd changer. It took me about a month, however I procrastinated a lot. [Here's a video of the prototype working (ignore the awful music)](https://youtu.be/_DS7fCqb5ws).
 
 ## Useful Info
 
+ - The arduino prototype code is in Jeep/ and the ATtiny version's code is in src/
  - My radio model is p05064354aj.
  - I'm using an Arduino UNO and a XS-3868 Bluetooth module
  - Chrysler radios, made before 2004, use the car’s internal PCI bus for communication with other accessories (i.e. a cd changer). It’s a good idea to be careful when writing to this bus because you could damage your car.
@@ -22,10 +23,12 @@ When I started driving, I wanted Bluetooth in my 2004 Jeep Grand Cherokee. Sever
  - [This guy’s project uses the same protocol so it was helpful.](https://github.com/connorwm/J1850VPW)
  - [Radio Pinout (there are also other radio pinouts here)](https://www.tehnomagazin.com/Auto-radio-car-connector/CHRYSLER-Car-Radio-Wiring-Connector.htm)
 
-## Plans
+## Todo
 
- - I might move the J1850 VPW part of this project into its own library.
- - My current script for the Arduino is a little buggy, so it needs to be fixed up.
+ - Finish converting from the Arduino prototype to the ATtiny version
+   - CRC check (Frame Creation in general)
+   - Proper Responses to the radio
+ - In the current configuration, the relay is unreliable so that needs to be fixed
 
 ----
 
